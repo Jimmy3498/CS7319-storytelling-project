@@ -1,0 +1,20 @@
+flowchart LR
+  UI[ScreenController] --> GW[EventGateway]
+  GW -->|enqueue command| BUS[InProcessBus / Queue]
+  BUS --> AUTH[Accounts / campaigns / profiles handlers]
+  BUS --> ADMIT[Gameplay admission]
+  ADMIT -->|context prepared| BUS
+  BUS --> PLAN[Director model]
+  PLAN -->|plan proposed| BUS
+  BUS --> VALIDATE[Validation / disclosure / projection]
+  VALIDATE -->|narration work ready| BUS
+  BUS --> NARRATE[Narrator model]
+  NARRATE -->|narration proposed| BUS
+  BUS --> COMMIT[Persistence handler]
+  COMMIT -->|atomic commit| SQL[SQLiteStore + pending notices]
+  COMMIT -->|turn committed IDs| BUS
+  BUS --> RESULT[Result subscriber]
+  BUS --> REPORT[Independent report subscriber]
+  SQL --> RECOVER[CompletionRecovery]
+  RECOVER -->|notifications only| BUS
+  AUTH & ADMIT & PLAN & VALIDATE & NARRATE & COMMIT & REPORT --> SHARED[Shared domain capabilities / adapters]

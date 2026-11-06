@@ -1,0 +1,25 @@
+flowchart TB
+  subgraph P[Presentation]
+    UI[ScreenController / Streamlit screens]
+  end
+  subgraph A[Application]
+    GW[LayeredGateway]
+    APP[LayeredApplication]
+  end
+  subgraph D[Domain-facing capabilities]
+    AUTH[AccountService]
+    WORLD[WorldService / EditorService]
+    PLAY[GameplayService / KnowledgePolicy / AIService]
+    EXTRA[ProfileService / UpdateService / ReportingService / QueryService]
+  end
+  subgraph I[Infrastructure implementations]
+    SQL[SQLiteStore]
+    HTTP[CompatibleHttpProvider]
+    SEC[LocalCredentialStore / ScryptPasswordHasher]
+  end
+  UI -->|submit / poll / query| GW
+  GW --> APP
+  APP --> AUTH & WORLD & PLAY & EXTRA
+  AUTH & WORLD & PLAY & EXTRA -->|typed ports| SQL
+  PLAY -->|ProviderTransport| HTTP
+  AUTH & EXTRA --> SEC

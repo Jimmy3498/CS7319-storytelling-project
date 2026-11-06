@@ -1,0 +1,2 @@
+streamlit==1.66.1
+# Optional real credential adapter: pip install keyring (see docs/CONTRACTS.md).

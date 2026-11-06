@@ -1,0 +1,65 @@
+classDiagram
+  class ApplicationGateway { <<interface>>
+    submit(context, command, request_id)
+    poll(context, operation_id)
+    query(context, query)
+  }
+  class ScreenController
+  class LayeredGateway
+  class LayeredApplication
+  class EventGateway
+  class InProcessBus
+  class ComponentHandlers
+  class WorkflowStateStore
+  class CompletionRecovery
+  class Services
+  class AccountService
+  class WorldService
+  class EditorService
+  class GameplayService
+  class KnowledgePolicy
+  class AIService
+  class ProfileService
+  class UpdateService
+  class ReportingService
+  class QueryService
+  class SQLiteStore
+  class CampaignRepository { <<interface>> }
+  class SessionRepository { <<interface>> }
+  class ProviderTransport { <<interface>> }
+  class CredentialStore { <<interface>> }
+  class CompatibleHttpProvider
+  class ScriptedTestProvider
+  class LocalCredentialStore
+  class OperationStatusStore
+  ScreenController --> ApplicationGateway
+  LayeredGateway ..|> ApplicationGateway
+  EventGateway ..|> ApplicationGateway
+  LayeredGateway --> LayeredApplication
+  LayeredGateway --> OperationStatusStore
+  LayeredApplication --> Services
+  EventGateway --> InProcessBus
+  EventGateway --> OperationStatusStore
+  InProcessBus --> ComponentHandlers
+  ComponentHandlers --> Services
+  ComponentHandlers --> WorkflowStateStore
+  CompletionRecovery --> InProcessBus
+  Services o-- AccountService
+  Services o-- WorldService
+  Services o-- EditorService
+  Services o-- GameplayService
+  Services o-- KnowledgePolicy
+  Services o-- AIService
+  Services o-- ProfileService
+  Services o-- UpdateService
+  Services o-- ReportingService
+  Services o-- QueryService
+  WorldService --> CampaignRepository
+  GameplayService --> SessionRepository
+  SQLiteStore ..|> CampaignRepository
+  SQLiteStore ..|> SessionRepository
+  AIService --> ProviderTransport
+  CompatibleHttpProvider ..|> ProviderTransport
+  ScriptedTestProvider ..|> ProviderTransport
+  ProfileService --> CredentialStore
+  LocalCredentialStore ..|> CredentialStore

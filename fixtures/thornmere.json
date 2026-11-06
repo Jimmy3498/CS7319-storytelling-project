@@ -1,0 +1,677 @@
+{
+  "schema": "cs7319.demo-campaign.v1",
+  "status": "synthetic adaptation; not a persisted or validated application campaign",
+  "provenance": {
+    "source_name": "ST Workbench fixtures/world-state/medieval-wedding-murder.json",
+    "source_sha256": "b916bb5d0816d7a1312627d3a7ae35d835037e039d2f36b41827f15a0417c454",
+    "changes": [
+      "Compact entity set and explicit field visibility",
+      "School typed schema, closed conditions and milestones",
+      "New witness-seal template for genuine runtime creation",
+      "Private spoiler canary for negative tests"
+    ],
+    "authorship": "AI-assisted synthetic campaign adaptation"
+  },
+  "draft": {
+    "id": "thornmere-demo",
+    "owner_id": "fixture-author-not-a-real-account",
+    "revision": 0,
+    "content": {
+      "title": "The Thornmere Wedding",
+      "summary": "A storm-bound wedding becomes an inquiry after a guest collapses.",
+      "background": {
+        "id": "background",
+        "title": "Background",
+        "text": "A winter storm has isolated the Thornmere household.",
+        "access": {
+          "visibility": "public",
+          "character_ids": []
+        },
+        "reveal_when": null,
+        "stance": "authored_fact",
+        "holder_id": null
+      },
+      "opening": {
+        "id": "opening",
+        "title": "Opening",
+        "text": "You are Rowan Vale, standing in the Great Hall as the guests react to Edric's collapse.",
+        "access": {
+          "visibility": "public",
+          "character_ids": []
+        },
+        "reveal_when": null,
+        "stance": "authored_fact",
+        "holder_id": null
+      },
+      "world": {
+        "canon": [
+          {
+            "id": "public-premise",
+            "title": "Public Premise",
+            "text": "At a winter wedding, Edric has collapsed. The culprit is not publicly known.",
+            "access": {
+              "visibility": "public",
+              "character_ids": []
+            },
+            "reveal_when": null,
+            "stance": "authored_fact",
+            "holder_id": null
+          },
+          {
+            "id": "chalice-clue",
+            "title": "Chalice Clue",
+            "text": "A bitter-almond scent lingers in the chalice.",
+            "access": {
+              "visibility": "director",
+              "character_ids": []
+            },
+            "reveal_when": {
+              "kind": "owns_item",
+              "target_id": "wedding-chalice",
+              "expected": true
+            },
+            "stance": "authored_fact",
+            "holder_id": null
+          }
+        ],
+        "characters": [
+          {
+            "id": "rowan",
+            "name": "Rowan Vale",
+            "playable": true,
+            "location_id": "great-hall",
+            "appearance": {
+              "id": "rowan-appearance",
+              "title": "Rowan Appearance",
+              "text": "Rowan Vale wears formal winter clothing.",
+              "access": {
+                "visibility": "public",
+                "character_ids": []
+              },
+              "reveal_when": null,
+              "stance": "authored_fact",
+              "holder_id": null
+            },
+            "expression_style": {
+              "id": "rowan-manner",
+              "title": "Rowan Manner",
+              "text": "Speaks carefully and watches the room.",
+              "access": {
+                "visibility": "public",
+                "character_ids": []
+              },
+              "reveal_when": null,
+              "stance": "authored_fact",
+              "holder_id": null
+            },
+            "personality": {
+              "id": "rowan-personality",
+              "title": "Rowan Personality",
+              "text": "Values privacy and chooses what to disclose.",
+              "access": {
+                "visibility": "character",
+                "character_ids": [
+                  "rowan"
+                ]
+              },
+              "reveal_when": null,
+              "stance": "authored_fact",
+              "holder_id": null
+            },
+            "personal_history": {
+              "id": "rowan-history",
+              "title": "Rowan History",
+              "text": "A wedding guest with a connection to the family.",
+              "access": {
+                "visibility": "character",
+                "character_ids": [
+                  "rowan"
+                ]
+              },
+              "reveal_when": null,
+              "stance": "authored_fact",
+              "holder_id": null
+            },
+            "knowledge": [],
+            "stats": [
+              {
+                "id": "rowan-composure",
+                "name": "Composure",
+                "value": 60,
+                "minimum": 0,
+                "maximum": 100,
+                "access": {
+                  "visibility": "character",
+                  "character_ids": [
+                    "rowan"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "mara",
+            "name": "Mara Ashdown",
+            "playable": false,
+            "location_id": "great-hall",
+            "appearance": {
+              "id": "mara-appearance",
+              "title": "Mara Appearance",
+              "text": "Mara Ashdown wears formal winter clothing.",
+              "access": {
+                "visibility": "public",
+                "character_ids": []
+              },
+              "reveal_when": null,
+              "stance": "authored_fact",
+              "holder_id": null
+            },
+            "expression_style": {
+              "id": "mara-manner",
+              "title": "Mara Manner",
+              "text": "Speaks carefully and watches the room.",
+              "access": {
+                "visibility": "public",
+                "character_ids": []
+              },
+              "reveal_when": null,
+              "stance": "authored_fact",
+              "holder_id": null
+            },
+            "personality": {
+              "id": "mara-personality",
+              "title": "Mara Personality",
+              "text": "Values privacy and chooses what to disclose.",
+              "access": {
+                "visibility": "character",
+                "character_ids": [
+                  "mara"
+                ]
+              },
+              "reveal_when": null,
+              "stance": "authored_fact",
+              "holder_id": null
+            },
+            "personal_history": {
+              "id": "mara-history",
+              "title": "Mara History",
+              "text": "A wedding guest with a connection to the family.",
+              "access": {
+                "visibility": "character",
+                "character_ids": [
+                  "mara"
+                ]
+              },
+              "reveal_when": null,
+              "stance": "authored_fact",
+              "holder_id": null
+            },
+            "knowledge": [],
+            "stats": [
+              {
+                "id": "mara-composure",
+                "name": "Composure",
+                "value": 60,
+                "minimum": 0,
+                "maximum": 100,
+                "access": {
+                  "visibility": "character",
+                  "character_ids": [
+                    "mara"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "tomas",
+            "name": "Brother Tomas",
+            "playable": false,
+            "location_id": "great-hall",
+            "appearance": {
+              "id": "tomas-appearance",
+              "title": "Tomas Appearance",
+              "text": "Brother Tomas wears formal winter clothing.",
+              "access": {
+                "visibility": "public",
+                "character_ids": []
+              },
+              "reveal_when": null,
+              "stance": "authored_fact",
+              "holder_id": null
+            },
+            "expression_style": {
+              "id": "tomas-manner",
+              "title": "Tomas Manner",
+              "text": "Speaks carefully and watches the room.",
+              "access": {
+                "visibility": "public",
+                "character_ids": []
+              },
+              "reveal_when": null,
+              "stance": "authored_fact",
+              "holder_id": null
+            },
+            "personality": {
+              "id": "tomas-personality",
+              "title": "Tomas Personality",
+              "text": "Values privacy and chooses what to disclose.",
+              "access": {
+                "visibility": "character",
+                "character_ids": [
+                  "tomas"
+                ]
+              },
+              "reveal_when": null,
+              "stance": "authored_fact",
+              "holder_id": null
+            },
+            "personal_history": {
+              "id": "tomas-history",
+              "title": "Tomas History",
+              "text": "A wedding guest with a connection to the family.",
+              "access": {
+                "visibility": "character",
+                "character_ids": [
+                  "tomas"
+                ]
+              },
+              "reveal_when": null,
+              "stance": "authored_fact",
+              "holder_id": null
+            },
+            "knowledge": [
+              {
+                "id": "tomas-private-report",
+                "title": "Tomas Private Report",
+                "text": "Tomas privately heard a quarrel before the toast.",
+                "access": {
+                  "visibility": "character",
+                  "character_ids": [
+                    "tomas"
+                  ]
+                },
+                "reveal_when": null,
+                "stance": "hearsay",
+                "holder_id": "tomas"
+              }
+            ],
+            "stats": [
+              {
+                "id": "tomas-composure",
+                "name": "Composure",
+                "value": 60,
+                "minimum": 0,
+                "maximum": 100,
+                "access": {
+                  "visibility": "character",
+                  "character_ids": [
+                    "tomas"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "cedric",
+            "name": "Cedric Fen",
+            "playable": false,
+            "location_id": "great-hall",
+            "appearance": {
+              "id": "cedric-appearance",
+              "title": "Cedric Appearance",
+              "text": "Cedric Fen wears formal winter clothing.",
+              "access": {
+                "visibility": "public",
+                "character_ids": []
+              },
+              "reveal_when": null,
+              "stance": "authored_fact",
+              "holder_id": null
+            },
+            "expression_style": {
+              "id": "cedric-manner",
+              "title": "Cedric Manner",
+              "text": "Speaks carefully and watches the room.",
+              "access": {
+                "visibility": "public",
+                "character_ids": []
+              },
+              "reveal_when": null,
+              "stance": "authored_fact",
+              "holder_id": null
+            },
+            "personality": {
+              "id": "cedric-personality",
+              "title": "Cedric Personality",
+              "text": "Values privacy and chooses what to disclose.",
+              "access": {
+                "visibility": "character",
+                "character_ids": [
+                  "cedric"
+                ]
+              },
+              "reveal_when": null,
+              "stance": "authored_fact",
+              "holder_id": null
+            },
+            "personal_history": {
+              "id": "cedric-history",
+              "title": "Cedric History",
+              "text": "A wedding guest with a connection to the family.",
+              "access": {
+                "visibility": "character",
+                "character_ids": [
+                  "cedric"
+                ]
+              },
+              "reveal_when": null,
+              "stance": "authored_fact",
+              "holder_id": null
+            },
+            "knowledge": [
+              {
+                "id": "cedric-private-secret",
+                "title": "Cedric Private Secret",
+                "text": "SPOILER-CANARY-CEDRIC: Cedric tampered with the chalice.",
+                "access": {
+                  "visibility": "character",
+                  "character_ids": [
+                    "cedric"
+                  ]
+                },
+                "reveal_when": null,
+                "stance": "authored_fact",
+                "holder_id": "cedric"
+              }
+            ],
+            "stats": [
+              {
+                "id": "cedric-composure",
+                "name": "Composure",
+                "value": 60,
+                "minimum": 0,
+                "maximum": 100,
+                "access": {
+                  "visibility": "character",
+                  "character_ids": [
+                    "cedric"
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "locations": [
+          {
+            "id": "great-hall",
+            "name": "Thornmere Great Hall",
+            "description": {
+              "id": "great-hall-description",
+              "title": "Great Hall Description",
+              "text": "Guests shelter from the storm after the wedding toast.",
+              "access": {
+                "visibility": "public",
+                "character_ids": []
+              },
+              "reveal_when": null,
+              "stance": "authored_fact",
+              "holder_id": null
+            },
+            "connected_location_ids": [
+              "antechamber",
+              "service-passage"
+            ]
+          },
+          {
+            "id": "antechamber",
+            "name": "Antechamber",
+            "description": {
+              "id": "antechamber-description",
+              "title": "Antechamber Description",
+              "text": "A small side room with a writing desk and coat hooks.",
+              "access": {
+                "visibility": "public",
+                "character_ids": []
+              },
+              "reveal_when": null,
+              "stance": "authored_fact",
+              "holder_id": null
+            },
+            "connected_location_ids": [
+              "great-hall"
+            ]
+          },
+          {
+            "id": "service-passage",
+            "name": "Service Passage",
+            "description": {
+              "id": "service-passage-description",
+              "title": "Service Passage Description",
+              "text": "A narrow passage used by the household staff.",
+              "access": {
+                "visibility": "public",
+                "character_ids": []
+              },
+              "reveal_when": null,
+              "stance": "authored_fact",
+              "holder_id": null
+            },
+            "connected_location_ids": [
+              "great-hall"
+            ]
+          }
+        ],
+        "item_templates": [
+          {
+            "id": "dagger-template",
+            "name": "Ceremonial Wedding Dagger",
+            "description": {
+              "id": "dagger-template-description",
+              "title": "Dagger Template Description",
+              "text": "A small ceremonial dagger.",
+              "access": {
+                "visibility": "public",
+                "character_ids": []
+              },
+              "reveal_when": null,
+              "stance": "authored_fact",
+              "holder_id": null
+            },
+            "spawn_when": null,
+            "max_instances_per_session": 1
+          },
+          {
+            "id": "chalice-template",
+            "name": "Silver Wedding Chalice",
+            "description": {
+              "id": "chalice-template-description",
+              "title": "Chalice Template Description",
+              "text": "An engraved silver chalice.",
+              "access": {
+                "visibility": "public",
+                "character_ids": []
+              },
+              "reveal_when": null,
+              "stance": "authored_fact",
+              "holder_id": null
+            },
+            "spawn_when": null,
+            "max_instances_per_session": 1
+          },
+          {
+            "id": "seal-template",
+            "name": "Witness Seal",
+            "description": {
+              "id": "seal-template-description",
+              "title": "Seal Template Description",
+              "text": "A wax seal made from the writing-desk supplies.",
+              "access": {
+                "visibility": "public",
+                "character_ids": []
+              },
+              "reveal_when": null,
+              "stance": "authored_fact",
+              "holder_id": null
+            },
+            "spawn_when": {
+              "kind": "at_location",
+              "target_id": "antechamber",
+              "expected": true
+            },
+            "max_instances_per_session": 1
+          }
+        ],
+        "items": [
+          {
+            "id": "hidden-dagger",
+            "template_id": "dagger-template",
+            "holder_id": null,
+            "location_id": "antechamber",
+            "access": {
+              "visibility": "director",
+              "character_ids": []
+            },
+            "discover_when": {
+              "kind": "at_location",
+              "target_id": "antechamber",
+              "expected": true
+            }
+          },
+          {
+            "id": "wedding-chalice",
+            "template_id": "chalice-template",
+            "holder_id": null,
+            "location_id": "great-hall",
+            "access": {
+              "visibility": "public",
+              "character_ids": []
+            },
+            "discover_when": null
+          }
+        ],
+        "relationships": [
+          {
+            "id": "rowan-mara",
+            "source_id": "rowan",
+            "target_id": "mara",
+            "label": "Cooperating guests",
+            "description": {
+              "id": "rowan-mara-description",
+              "title": "Rowan Mara Description",
+              "text": "They agree to ask careful questions.",
+              "access": {
+                "visibility": "public",
+                "character_ids": []
+              },
+              "reveal_when": null,
+              "stance": "authored_fact",
+              "holder_id": null
+            },
+            "stats": [
+              {
+                "id": "rowan-mara-trust",
+                "name": "Trust",
+                "value": 50,
+                "minimum": 0,
+                "maximum": 100,
+                "access": {
+                  "visibility": "director",
+                  "character_ids": []
+                }
+              }
+            ]
+          }
+        ],
+        "flags": [
+          {
+            "id": "inquiry-complete",
+            "label": "First inquiry complete",
+            "initial": false,
+            "set_when": {
+              "kind": "owns_item",
+              "target_id": "wedding-chalice",
+              "expected": true
+            },
+            "access": {
+              "visibility": "public",
+              "character_ids": []
+            }
+          }
+        ],
+        "narrative_rules": [
+          {
+            "id": "rule-player-agency",
+            "title": "Rule Player Agency",
+            "text": "Do not invent the player character's unchosen actions or reveal private character knowledge.",
+            "access": {
+              "visibility": "public",
+              "character_ids": []
+            },
+            "reveal_when": null,
+            "stance": "authored_fact",
+            "holder_id": null
+          },
+          {
+            "id": "rule-tone",
+            "title": "Rule Tone",
+            "text": "Maintain a grounded, contained mystery. Claims are not automatically objective facts.",
+            "access": {
+              "visibility": "public",
+              "character_ids": []
+            },
+            "reveal_when": null,
+            "stance": "authored_fact",
+            "holder_id": null
+          }
+        ],
+        "stat_bands": [
+          {
+            "stat_id": "rowan-composure",
+            "minimum": 0,
+            "maximum": 40,
+            "text": "Unsettled"
+          },
+          {
+            "stat_id": "rowan-composure",
+            "minimum": 40,
+            "maximum": 100,
+            "text": "Steady"
+          }
+        ],
+        "milestones": [
+          {
+            "id": "entered-antechamber",
+            "label": "Visited the Antechamber",
+            "condition": {
+              "kind": "at_location",
+              "target_id": "antechamber",
+              "expected": true
+            },
+            "definition_fingerprint": "f3e711f98fa1782a16e74ec80a521f44ff518dd06e8baa9f12a5093232e2d2a7"
+          },
+          {
+            "id": "held-chalice",
+            "label": "Acquired the chalice",
+            "condition": {
+              "kind": "owns_item",
+              "target_id": "wedding-chalice",
+              "expected": true
+            },
+            "definition_fingerprint": "dfdd9c44e3a00b97879cd5033113b3884923aff124a2fa5156fdab37d7d01ebf"
+          },
+          {
+            "id": "finished-inquiry",
+            "label": "Closed the first inquiry",
+            "condition": {
+              "kind": "flag_equals",
+              "target_id": "inquiry-complete",
+              "expected": true
+            },
+            "definition_fingerprint": "82037d31786b5c141ffafccefc91ced673361576279c977c3fd09c9669d781cb"
+          }
+        ]
+      }
+    }
+  }
+}
